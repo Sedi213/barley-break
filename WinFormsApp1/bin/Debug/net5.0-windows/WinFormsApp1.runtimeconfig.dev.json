@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Sedma\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Sedma\\.nuget\\packages"
+    ]
+  }
+}
