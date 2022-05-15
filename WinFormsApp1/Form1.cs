@@ -19,8 +19,9 @@ namespace WinFormsApp1
         
         private void Form1_Load(object sender, EventArgs e)
         {
-                    Label huh= new Label();
+            Label huh= new Label();
             huh.Text = "sad";
+            //test
             this.Controls.Add(huh);
         }
     }
