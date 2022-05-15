@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sedma\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Sedma\\Documents\\GitHub\\Tagss\\WinFormsApp1\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\Sedma\\source\\repos\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectPath": "C:\\Users\\Sedma\\Documents\\GitHub\\Tagss\\WinFormsApp1\\WinFormsApp1.csproj",
       "packagesPath": "C:\\Users\\Sedma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sedma\\source\\repos\\WinFormsApp1\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Users\\Sedma\\Documents\\GitHub\\Tagss\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sedma\\AppData\\Roaming\\NuGet\\NuGet.Config",
