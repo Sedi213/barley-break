@@ -42,10 +42,14 @@ namespace WinFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
            int position = Convert.ToInt32(((Button)sender).Tag);
-            if ((position / 4) + 1 < 4) { MessageBox.Show("down"); }
-            if ((position / 4) - 1 > -1) { MessageBox.Show("up"); }
-            if ((position % 4) + 1 < 4) { MessageBox.Show("right"); }
-            if ((position % 4) - 1 > -1) { MessageBox.Show("lef"); }
+            if ((position / 4) + 1 < 4)//can down swap
+            { MessageBox.Show("down"); }
+            if ((position / 4) - 1 > -1)//can up swap
+            { MessageBox.Show("up"); }
+            if ((position % 4) + 1 < 4)//can right swap
+            { MessageBox.Show("right"); }
+            if ((position % 4) - 1 > -1)//can left swap
+            { MessageBox.Show("lef"); }
         }
     }
 }
