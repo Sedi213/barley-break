@@ -22,10 +22,11 @@ namespace WinFormsApp1
         
         private void Form1_Load(object sender, EventArgs e)
         {
+            //initialization button
             for (int i = 0; i < 16; i++)
             {
-                int width = 70;
-                int height =70;
+                int width = 100;
+                int height =100;
                 btn[i] = new Button();
                 btn[i].Text = (i+1).ToString();
                 btn[i].Location = new Point((i % 4) * width, height*(i/4));
@@ -35,7 +36,10 @@ namespace WinFormsApp1
                 btn[i].Click += button1_Click;
                 this.Controls.Add(btn[i]);
             }
-              
+            btn[15].Text = "";  
+            
+
+            //rand tag
             
         }
 
@@ -43,13 +47,30 @@ namespace WinFormsApp1
         {
            int position = Convert.ToInt32(((Button)sender).Tag);
             if ((position / 4) + 1 < 4)//can down swap
-            { MessageBox.Show("down"); }
+                swapbnt(btn[position +4], btn[position]);
             if ((position / 4) - 1 > -1)//can up swap
-            { MessageBox.Show("up"); }
+                swapbnt(btn[position - 4], btn[position]);
             if ((position % 4) + 1 < 4)//can right swap
-            { MessageBox.Show("right"); }
+                swapbnt(btn[position + 1], btn[position]);
             if ((position % 4) - 1 > -1)//can left swap
-            { MessageBox.Show("lef"); }
+                swapbnt(btn[position - 1], btn[position]);
+
+
+
+            //check win
+            for (int i = 0; i < 15; i++)
+                if (btn[i].Text != (i + 1).ToString()) return;
+
+            MessageBox.Show("You win");
+        }
+
+        private void swapbnt(Button next,Button current)
+        {
+            if (next.Text == "")
+            {
+                next.Text = current.Text;
+                current.Text = "";
+            }
         }
     }
 }
