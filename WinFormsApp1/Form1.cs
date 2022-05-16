@@ -36,11 +36,44 @@ namespace WinFormsApp1
                 btn[i].Click += button1_Click;
                 this.Controls.Add(btn[i]);
             }
-            btn[15].Text = "";  
-            
+            btn[15].Text = "";
+
+
 
             //rand tag
-            
+            Random r = new Random();
+            int tempPosition=15;
+            for (int i = 0; i < 100; i++)
+            {
+                switch (r.Next(0,4))
+                {
+                    case 0:
+                        if ((tempPosition / 4) + 1 < 4) { //can down swap
+                            btn[tempPosition].Text = btn[tempPosition +4].Text;
+                            btn[tempPosition +4].Text = "";
+                            tempPosition += 4; }
+                        break;
+                    case 1:
+                        if ((tempPosition / 4) - 1 > -1) { //can down swap
+                            btn[tempPosition].Text = btn[tempPosition - 4].Text;
+                            btn[tempPosition - 4].Text = "";
+                            tempPosition -= 4; }
+                        break;
+                    case 2:
+                        if ((tempPosition % 4) + 1 < 4){//can down swap
+                            btn[tempPosition].Text = btn[tempPosition+1].Text;
+                            btn[tempPosition+1].Text = "";
+                            tempPosition += 1;}
+                        break;
+                    case 3:
+                        if ((tempPosition % 4) - 1 > -1){//can down swap;
+                            btn[tempPosition].Text = btn[tempPosition-1].Text;
+                            btn[tempPosition-1].Text = "";
+                            tempPosition -= 1;}
+                        break;
+                 
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
