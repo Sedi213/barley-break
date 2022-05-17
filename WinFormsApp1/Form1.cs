@@ -49,26 +49,22 @@ namespace WinFormsApp1
                 {
                     case 0:
                         if ((tempPosition / 4) + 1 < 4) { //can down swap
-                            btn[tempPosition].Text = btn[tempPosition +4].Text;
-                            btn[tempPosition +4].Text = "";
+                            Tryswapbnt(btn[tempPosition], btn[tempPosition + 4]);
                             tempPosition += 4; }
                         break;
                     case 1:
                         if ((tempPosition / 4) - 1 > -1) { //can down swap
-                            btn[tempPosition].Text = btn[tempPosition - 4].Text;
-                            btn[tempPosition - 4].Text = "";
+                            Tryswapbnt(btn[tempPosition], btn[tempPosition - 4]);
                             tempPosition -= 4; }
                         break;
                     case 2:
                         if ((tempPosition % 4) + 1 < 4){//can down swap
-                            btn[tempPosition].Text = btn[tempPosition+1].Text;
-                            btn[tempPosition+1].Text = "";
+                            Tryswapbnt(btn[tempPosition], btn[tempPosition + 1]);
                             tempPosition += 1;}
                         break;
                     case 3:
                         if ((tempPosition % 4) - 1 > -1){//can down swap;
-                            btn[tempPosition].Text = btn[tempPosition-1].Text;
-                            btn[tempPosition-1].Text = "";
+                            Tryswapbnt(btn[tempPosition], btn[tempPosition - 1]);
                             tempPosition -= 1;}
                         break;
                  
@@ -80,13 +76,13 @@ namespace WinFormsApp1
         {
            int position = Convert.ToInt32(((Button)sender).Tag);
             if ((position / 4) + 1 < 4)//can down swap
-                swapbnt(btn[position +4], btn[position]);
+                Tryswapbnt(btn[position +4], btn[position]);
             if ((position / 4) - 1 > -1)//can up swap
-                swapbnt(btn[position - 4], btn[position]);
+                Tryswapbnt(btn[position - 4], btn[position]);
             if ((position % 4) + 1 < 4)//can right swap
-                swapbnt(btn[position + 1], btn[position]);
+                Tryswapbnt(btn[position + 1], btn[position]);
             if ((position % 4) - 1 > -1)//can left swap
-                swapbnt(btn[position - 1], btn[position]);
+                Tryswapbnt(btn[position - 1], btn[position]);
 
 
 
@@ -97,7 +93,7 @@ namespace WinFormsApp1
             MessageBox.Show("You win");
         }
 
-        private void swapbnt(Button next,Button current)
+        private void Tryswapbnt(Button next,Button current)
         {
             if (next.Text == "")
             {

@@ -1,0 +1,5 @@
+C:\Users\Sedma\Documents\GitHub\Tagss\WinFormsApp1\bin\publish\Tag.exe
+C:\Users\Sedma\Documents\GitHub\Tagss\WinFormsApp1\bin\publish\Tag.dll
+C:\Users\Sedma\Documents\GitHub\Tagss\WinFormsApp1\bin\publish\Tag.deps.json
+C:\Users\Sedma\Documents\GitHub\Tagss\WinFormsApp1\bin\publish\Tag.runtimeconfig.json
+C:\Users\Sedma\Documents\GitHub\Tagss\WinFormsApp1\bin\publish\Tag.pdb
